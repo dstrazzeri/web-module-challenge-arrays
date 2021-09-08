@@ -174,7 +174,7 @@ function filterByWord(arr, string) {
   for (let i = 0; i < arr.length; i++)
     {
       if(arr[i].includes(string)) {
-      returnArr.push(arr.[i]);
+      returnArr.push(arr[i]);
     }
   }
   return returnArr;
