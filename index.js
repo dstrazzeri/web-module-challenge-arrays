@@ -46,8 +46,9 @@ Use the copy function below to do the following:
 */
 
 function copy(originalFlavors){
-  return originalFlavors;
+  return [...originalFlavors];
 }  
+
 console.log(copy(originalFlavors));     
 
 
@@ -82,12 +83,11 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(originalFlavors){
+function addFlavor(originalFlavors, newFlavor){
+  originalFlavors.unshift(newFlavor)
   return originalFlavors;
 }
-originalFlavors.unshift("Rainbow Sherbert");
-console.log(originalFlavors);
-
+console.log(addFlavor(originalFlavors, "Cookie Dough"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -102,11 +102,10 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(originalFlavors) {
-  return originalFlavors;
+  const r =[...originalFlavors]
+  r.pop();
+  return r;
 }
-originalFlavors.pop();
-console.log(originalFlavors);
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -141,11 +140,10 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors){
-  return (`${"Rocky Road"}`);
+function removeFlavorByName(originalFlavors, flavorName) {
+  return originalFlavors.splice(30,1)
 }
-originalFlavors.splice(28, 1);
-console.log(originalFlavors);
+console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
 
 
